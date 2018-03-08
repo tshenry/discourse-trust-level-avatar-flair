@@ -1,0 +1,12 @@
+{
+  "name": "Trust-Level Avatar Flair Theme Component",
+  "about_url": "https://github.com/tshenry/discourse-trust-level-avatar-flair/blob/master/README.md",
+  "license_url": "https://github.com/tshenry/discourse-trust-level-avatar-flair/blob/master/LICENSE",
+   "assets": {
+       "new-flair": "assets/placeholder.png"
+       "basic-flair": "assets/placeholder.png"
+       "member-flair": "assets/placeholder.png"
+       "regular-flair": "assets/placeholder.png"
+       "leader-flair": "assets/placeholder.png"
+   }
+}
