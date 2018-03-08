@@ -1,0 +1,57 @@
+// TL0
+.tl-new {
+    background-image: url($new-flair);
+}
+// TL1
+.tl-basic {
+    background-image: url($basic-flair);
+}
+// TL2
+.tl-member {
+    background-image: url($member-flair);
+}
+// TL3
+.tl-regular {
+    background-image: url($regular-flair);
+}
+// TL4
+.tl-leader {
+    background-image: url($leader-flair);
+}
+.tl-flair {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+
+}
+.tl-flair.user-card {
+    background-size: 40px 40px;
+    width: 40px;
+    height: 40px;
+    bottom: 0;
+    left: -6px;
+}
+.tl-flair.topic {
+    background-size: 20px 20px;
+    width: 20px;
+    height: 20px;
+    bottom: 0;
+    left: -6px;
+}
+.tl-flair.user-profile {
+    background-size: 40px 40px;
+    width: 40px;
+    height: 40px;
+    bottom: 8px;
+    left: -4px;
+}
+.collapsed-info .tl-flair.user-profile {
+    background-size: 20px 20px;
+    width: 20px;
+    height: 20px;
+    bottom: 8px;
+    left: -8px;
+}
