@@ -20,23 +20,6 @@
                 console.log("Trust Level Flair Error: something went wrong when evaluating a user's trust level");
         }
     });
-    api.decorateWidget('topic-participant:after', dec => {
-        var poster = dec.getModel();
-        switch(poster.get('trust_level')) {
-            case 0:
-                return dec.rawHtml(`<div title="new" class="tl-new tl-flair topic-map-avt"></div>`);
-            case 1:
-                return dec.rawHtml(`<div title="basic" class="tl-basic tl-flair topic-map-avt"></div>`);
-            case 2:
-                return dec.rawHtml(`<div title="member" class="tl-member tl-flair topic-map-avt"></div>`);
-            case 3:
-                return dec.rawHtml(`<div title="regular" class="tl-regular tl-flair topic-map-avt"></div>`);
-            case 4:
-                return dec.rawHtml(`<div title="leader" class="tl-leader tl-flair topic-map-avt"></div>`);
-            default:
-                console.log("Trust Level Flair Error: something went wrong when evaluating a user's trust level");
-        }
-    });
 </script>
 
 <script type="text/x-handlebars" data-template-name="user">
