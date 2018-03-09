@@ -26,12 +26,12 @@
     background-position: center;
     position: absolute;
 }
-.tl-flair.user-card-avt {
+.tl-flair.user-card-avt, .tl-flair.user-profile-avt {
     background-size: 40px 40px;
     width: 40px;
     height: 40px;
 }
-.tl-flair.topic-avt {
+.tl-flair.topic-avt, .collapsed-info .tl-flair.user-profile-avt {
     background-size: 20px 20px;
     width: 20px;
     height: 20px;
@@ -40,16 +40,6 @@
     background-size: 12px 12px;
     width: 16px;
     height: 16px;
-}
-.tl-flair.user-profile-avt {
-    background-size: 40px 40px;
-    width: 40px;
-    height: 40px;
-}
-.collapsed-info .tl-flair.user-profile-avt {
-    background-size: 20px 20px;
-    width: 20px;
-    height: 20px;
 }
 @if $trust_level_flair_position == 'overlap' {
     .tl-flair.user-card-avt {
@@ -71,6 +61,15 @@
     .collapsed-info .tl-flair.user-profile-avt {
         bottom: 8px;
         right: 14px;
+    }
+    @if $group_flair_always_on_top == 'true' {
+        .avatar-flair-image {
+            z-index: 1002;
+        }
+    } @else {
+        .avatar-flair-image {
+            z-index: initial;
+        }
     }
 } @else if $trust_level_flair_position == 'top-right' {
     .tl-flair.user-card-avt {
@@ -131,6 +130,29 @@
         bottom: 8px;
         right: 2px;
     }
+    @if $group_flair_always_on_top == 'true' {
+        .tl-flair.user-card-avt,
+        .tl-flair.topic-avt,
+        .tl-flair.topic-map-avt,
+        .tl-flair.user-profile-avt,
+        .collapsed-info .tl-flair.user-profile-avt {
+            display: none;
+        }
+        .avatar-flair-image {
+            display: initial !important;
+        }
+    } @else {
+        .tl-flair.user-card-avt,
+        .tl-flair.topic-avt,
+        .tl-flair.topic-map-avt,
+        .tl-flair.user-profile-avt,
+        .collapsed-info .tl-flair.user-profile-avt {
+            display: block;
+        }
+        .avatar-flair-image {
+            display: none !important;
+        }
+    }
 } @else {
     .tl-flair.user-card-avt, .tl-flair.topic-avt {
         bottom: 0;
@@ -147,15 +169,5 @@
     .collapsed-info .tl-flair.user-profile-avt {
         bottom: 8px;
         left: -8px;
-    }
-}
-
-@if $group_flair_always_on_top == 'true' {
-    .avatar-flair-image {
-        z-index: 1002;
-    }
-} @else {
-    .avatar-flair-image {
-        z-index: initial;
     }
 }
