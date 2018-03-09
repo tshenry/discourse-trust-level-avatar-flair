@@ -1,7 +1,44 @@
-.tl-flair.user-profile {
-    left: 2px;
+@if $trust_level_flair_position == 'overlap' {
+    .tl-flair.user-profile-avt {
+        right: 25px;
+    }
+    .collapsed-info .tl-flair.user-profile-avt {
+        bottom: 12px;
+        right: 13px;
+    }
+} @else if $trust_level_flair_position == 'top-right' {
+    .tl-flair.user-profile-avt {
+        right: 2px;
+    }
+    .collapsed-info .tl-flair.user-profile-avt {
+        top: 2px;
+        right: 2px;
+    }
 }
-.collapsed-info .tl-flair.user-profile {
-    bottom: 12px;
+@else if $trust_level_flair_position == 'top-left' {
+    .tl-flair.user-profile-avt {
+        left: 2px;
+    }
+    .collapsed-info .tl-flair.user-profile-avt {
+        top: 2px;
+        left: 2px;
+    }
 }
-
+@else if $trust_level_flair_position == 'bottom-right' {
+    .tl-flair.user-profile-avt {
+        right: 2px;
+    }
+    .collapsed-info .tl-flair.user-profile-avt {
+        bottom: 12px;
+        right: 2px;
+    }
+}
+@else {
+    .tl-flair.user-profile-avt {
+        left: 2px;
+    }
+    .collapsed-info .tl-flair.user-profile-avt {
+        bottom: 12px;
+        left: 2px;
+    }
+}
