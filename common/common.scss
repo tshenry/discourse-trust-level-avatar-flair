@@ -1,23 +1,3 @@
-// TL0
-.tl-new {
-    background-image: url($new-flair);
-}
-// TL1
-.tl-basic {
-    background-image: url($basic-flair);
-}
-// TL2
-.tl-member {
-    background-image: url($member-flair);
-}
-// TL3
-.tl-regular {
-    background-image: url($regular-flair);
-}
-// TL4
-.tl-leader {
-    background-image: url($leader-flair);
-}
 .tl-flair {
     display: flex;
     align-items: center;
