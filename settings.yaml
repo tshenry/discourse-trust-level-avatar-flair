@@ -1,0 +1,12 @@
+trust_level_flair_position:
+  default: "bottom-left"
+  type: enum
+  choices:
+    - "bottom-right"
+    - "top-right"
+    - "top-left"
+    - "overlap"
+group_flair_always_on_top:
+  default: true
+  type: bool
+  description: "(for orientations where the trust flair overlaps or is in the same position as group flair)"
