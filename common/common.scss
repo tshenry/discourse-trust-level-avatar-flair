@@ -133,7 +133,7 @@
             display: none !important;
         }
     }
-} @else {
+} @else if $trust_level_flair_position == 'bottom-left' {
     .tl-flair.user-card-avt, .tl-flair.topic-avt {
         bottom: 0;
         left: -6px;
