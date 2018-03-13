@@ -1,5 +1,5 @@
 <script type="text/x-handlebars" data-template-name="/connectors/user-card-avatar-flair/user-card-avatar-tl-flair">
-    <div title="{{user.trustLevel.name}}" class="tl-{{user.trustLevel.name}} tl-flair user-card-avt"></div>
+    <div class="tl-{{user.trustLevel.name}} tl-flair user-card-avt"></div>
 </script>
 
 <script type="text/discourse-plugin" version="0.8.18">
@@ -7,15 +7,15 @@
         var poster = dec.getModel();
         switch(poster.get('trust_level')) {
             case 0:
-                return dec.rawHtml(`<div title="new" class="tl-new tl-flair topic-avt"></div>`);
+                return dec.rawHtml(`<div class="tl-new tl-flair topic-avt"></div>`);
             case 1:
-                return dec.rawHtml(`<div title="basic" class="tl-basic tl-flair topic-avt"></div>`);
+                return dec.rawHtml(`<div class="tl-basic tl-flair topic-avt"></div>`);
             case 2:
-                return dec.rawHtml(`<div title="member" class="tl-member tl-flair topic-avt"></div>`);
+                return dec.rawHtml(`<div class="tl-member tl-flair topic-avt"></div>`);
             case 3:
-                return dec.rawHtml(`<div title="regular" class="tl-regular tl-flair topic-avt"></div>`);
+                return dec.rawHtml(`<div class="tl-regular tl-flair topic-avt"></div>`);
             case 4:
-                return dec.rawHtml(`<div title="leader" class="tl-leader tl-flair topic-avt"></div>`);
+                return dec.rawHtml(`<div class="tl-leader tl-flair topic-avt"></div>`);
             default:
                 console.log("Trust Level Flair Error: something went wrong when evaluating a user's trust level");
         }
@@ -247,5 +247,5 @@
 </script>
 
 <script type="text/x-handlebars" data-template-name="/connectors/user-profile-avatar-flair/user-profile-avatar-tl-flair">
-    <div title="{{model.trustLevel.name}}" class="tl-{{model.trustLevel.name}} tl-flair user-profile-avt"></div>
+    <div class="tl-{{model.trustLevel.name}} tl-flair user-profile-avt"></div>
 </script>
