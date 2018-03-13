@@ -1,3 +1,52 @@
+.tl-flair:after {
+    background: #f4f4f4;
+    border: #BCBCBC .5px solid;
+    box-shadow: 0px 5px 12px #888888;
+    top: 26px;
+    font-size: 11px;
+    font-family: "arial";
+    color: #000000;
+    left: 80%;
+    padding: 3px 8px;
+    position: absolute;
+    z-index: 98;
+    width: auto;
+    opacity: 0;
+    -webkit-transition: opacity 0.5s ease-in;
+       -moz-transition: opacity 0.5s ease-in;
+            transition: opacity 0.5s ease-in;
+}
+
+.tl-flair:hover:after {
+    opacity: 1;
+    -webkit-transition: opacity linear;
+       -moz-transition: opacity linear;
+            transition: opacity linear;
+    -webkit-transition-delay: 1.5s;
+       -moz-transition-delay: 1.5s;
+            transition-delay: 1.5s;
+}
+// TL0
+.tl-new.tl-flair:after {
+    content: $tl-new_tooltip;
+}
+// TL1
+.tl-basic.tl-flair:after {
+    content: $tl-basic_tooltip;
+}
+// TL2
+.tl-member.tl-flair:after {
+    content: $tl-member_tooltip;
+}
+// TL3
+.tl-regular.tl-flair:after {
+    content: $tl-regular_tooltip;
+}
+// TL4
+.tl-leader.tl-flair:after {
+    content: $tl-leader_tooltip;
+}
+
 .tl-flair {
     display: flex;
     align-items: center;
@@ -44,7 +93,7 @@
     }
     @if $group_flair_always_on_top == 'true' {
         .avatar-flair-image {
-            z-index: 1002;
+            z-index: 1;
         }
     } @else {
         .avatar-flair-image {
