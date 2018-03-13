@@ -28,23 +28,23 @@
 }
 // TL0
 .tl-new.tl-flair:after {
-    content: $tl-new_tooltip;
+    content: "#{$tl-new_tooltip}";
 }
 // TL1
 .tl-basic.tl-flair:after {
-    content: $tl-basic_tooltip;
+    content: "#{$tl-basic_tooltip}";
 }
 // TL2
 .tl-member.tl-flair:after {
-    content: $tl-member_tooltip;
+    content: "#{$tl-member_tooltip}";
 }
 // TL3
 .tl-regular.tl-flair:after {
-    content: $tl-regular_tooltip;
+    content: "#{$tl-regular_tooltip}";
 }
 // TL4
 .tl-leader.tl-flair:after {
-    content: $tl-leader_tooltip;
+    content: "#{$tl-leader_tooltip}";
 }
 
 .tl-flair {
