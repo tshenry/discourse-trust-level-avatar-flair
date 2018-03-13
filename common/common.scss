@@ -11,18 +11,19 @@
     position: absolute;
     z-index: 98;
     width: auto;
-    white-space: nowrap;
     opacity: 0;
-    -webkit-transition: opacity 0.5s ease-in;
-       -moz-transition: opacity 0.5s ease-in;
-            transition: opacity 0.5s ease-in;
+    visibility: hidden;
+    -webkit-transition: opacity 0.5s ease-in, visibility 0.5s ease-in;
+       -moz-transition: opacity 0.5s ease-in, visibility 0.5s ease-in;
+            transition: opacity 0.5s ease-in, visibility 0.5s ease-in;
 }
 
 .tl-flair:hover:after {
     opacity: 1;
-    -webkit-transition: opacity linear;
-       -moz-transition: opacity linear;
-            transition: opacity linear;
+    visibility: visible;
+    -webkit-transition: opacity linear, visibility linear;
+       -moz-transition: opacity linear, visibility linear;
+            transition: opacity linear, visibility linear;
     -webkit-transition-delay: 1.5s;
        -moz-transition-delay: 1.5s;
             transition-delay: 1.5s;
