@@ -10,3 +10,23 @@ group_flair_always_on_top:
   default: true
   type: bool
   description: "(for orientations where the trust flair overlaps or is in the same position as group flair)"
+tl-new_tooltip:
+  default: "new"
+  type: string
+  description: "Alternative text to be displayed when hovering over trust-level flair"
+tl-basic_tooltip:
+  default: "basic"
+  type: string
+  description: "Alternative text to be displayed when hovering over trust-level flair"
+tl-member_tooltip:
+  default: "member"
+  type: string
+  description: "Alternative text to be displayed when hovering over trust-level flair"
+tl-regular_tooltip:
+  default: "regular"
+  type: string
+  description: "Alternative text to be displayed when hovering over trust-level flair"
+tl-leader_tooltip:
+  default: "leader"
+  type: string
+  description: "Alternative text to be displayed when hovering over trust-level flair"
