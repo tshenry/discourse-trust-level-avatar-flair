@@ -163,24 +163,22 @@
         right: 2px;
     }
     @if $group_flair_always_on_top == 'true' {
-        .tl-flair.user-card-avt,
-        .tl-flair.topic-avt,
-        .tl-flair.topic-map-avt,
-        .tl-flair.user-profile-avt,
-        .collapsed-info .tl-flair.user-profile-avt {
+        .avatar-flair ~ .tl-flair.topic-avt {
             display: none;
+        }
+        .user-card-avatar-tl-flair, .user-profile-avatar-tl-flair {
+            display: none;
+        }
+        a + .ember-view .user-card-avatar-tl-flair {
+            display: block;
+        }
+        img + .ember-view .user-profile-avatar-tl-flair {
+            display: block;
         }
         .avatar-flair-image {
             display: initial !important;
         }
     } @else {
-        .tl-flair.user-card-avt,
-        .tl-flair.topic-avt,
-        .tl-flair.topic-map-avt,
-        .tl-flair.user-profile-avt,
-        .collapsed-info .tl-flair.user-profile-avt {
-            display: block;
-        }
         .avatar-flair-image {
             display: none !important;
         }
