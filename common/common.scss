@@ -68,11 +68,6 @@
     width: 20px;
     height: 20px;
 }
-.tl-flair.topic-map-avt {
-    background-size: 12px 12px;
-    width: 16px;
-    height: 16px;
-}
 @if $trust_level_flair_position == 'overlap' {
     .tl-flair.user-card-avt {
         bottom: 0;
@@ -81,10 +76,6 @@
     .tl-flair.topic-avt {
         bottom: 0;
         right: 6px;
-    }
-    .tl-flair.topic-map-avt {
-        bottom: -3px;
-        right: 7px;
     }
     .tl-flair.user-profile-avt {
         bottom: 8px;
@@ -112,10 +103,6 @@
         top: 15px;
         right: -6px;
     }
-    .tl-flair.topic-map-avt {
-        top: -3px;
-        right: 0;
-    }
     .tl-flair.user-profile-avt {
         top: 0;
         right: 16px;
@@ -133,10 +120,6 @@
         top: 15px;
         left: -6px;
     }
-    .tl-flair.topic-map-avt {
-        top: -3px;
-        left: -4px;
-    }
     .tl-flair.user-profile-avt {
         top: 0;
         left: -6px;
@@ -149,10 +132,6 @@
     .tl-flair.user-card-avt, .tl-flair.topic-avt {
         bottom: 0;
         right: -6px;
-    }
-    .tl-flair.topic-map-avt {
-        bottom: -3px;
-        right: 0px;
     }
     .tl-flair.user-profile-avt {
         bottom: 8px;
@@ -187,10 +166,6 @@
     .tl-flair.user-card-avt, .tl-flair.topic-avt {
         bottom: 0;
         left: -6px;
-    }
-    .tl-flair.topic-map-avt {
-        bottom: -3px;
-        left: -4px;
     }
     .tl-flair.user-profile-avt {
         bottom: 8px;
