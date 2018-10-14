@@ -4,22 +4,22 @@
     }
 
     @if (str-index($new_user_flair_image, 'http')) {
-        .tl-1 {
+        .tl-0 {
             background-image: url($new_user_flair_image);
         }
     }
     @if (str-index($basic_user_flair_image, 'http')) {
-        .tl-2 {
+        .tl-1 {
             background-image: url($basic_user_flair_image);
         }
     }
     @if (str-index($member_flair_image, 'http')) {
-        .tl-3 {
+        .tl-2 {
             background-image: url($member_flair_image);
         }
     }
     @if (str-index($regular_flair_image, 'http')) {
-        .tl-4 {
+        .tl-3 {
             background-image: url($regular_flair_image);
         }
     }
@@ -30,10 +30,35 @@
     }
 }
 @else {
-    .tl-flair,
-    .user-main .tl-flair .d-icon-heart { 
-        background: $font_awsome_background_color;
-        color: $font_awsome_color !important; // important needed for heart icon
+	@if (str-length($new_user_flair_image) > 0) {
+        .tl-0, .tl-0 .d-icon-heart {
+            background: $font_awsome_background_color;
+        	color: $font_awsome_color !important; // important needed for heart icon
+        }
+    }
+    @if (str-length($basic_user_flair_image) > 0) {
+        .tl-1, .tl-1 .d-icon-heart {
+            background: $font_awsome_background_color;
+        	color: $font_awsome_color !important; // important needed for heart icon
+        }
+    }
+    @if (str-length($member_flair_image) > 0) {
+        .tl-2, .tl-2 .d-icon-heart {
+            background: $font_awsome_background_color;
+        	color: $font_awsome_color !important; // important needed for heart icon
+        }
+    }
+    @if (str-length($regular_flair_image) > 0) {
+        .tl-3, .tl-3 .d-icon-heart {
+            background: $font_awsome_background_color;
+        	color: $font_awsome_color !important; // important needed for heart icon
+        }
+    }
+    @if (str-length($leader_flair_image) > 0) {
+        .tl-4, .tl-4 .d-icon-heart {
+            background: $font_awsome_background_color;
+        	color: $font_awsome_color !important; // important needed for heart icon
+        }
     }
 }
 .tl-flair {
