@@ -9,24 +9,51 @@ trust_level_flair_position:
 group_flair_always_on_top:
   default: true
   type: bool
-  description: "(for orientations where the trust flair overlaps or is in the same position as group flair)"
-tl-new_tooltip:
-  default: "new"
+  description: "For positions where the trust flair overlaps, or is in the same position as group flair."
+use_font_awesome:
+  default: false
+  type: bool
+  description: "<span>This will enable font awesome to be used in the flair image fields below. Use the name of the icon 
+    like <b>heart</b> or <b>plane</b>. <a href='https://fontawesome.com/v4.7.0/icons/' target='_blank'>Click Here</a> 
+    to view the list of availible icons."
+font_awsome_color:
+  default: "#ffffff"
   type: string
-  description: "Alternative text to be displayed when hovering over trust-level flair"
-tl-basic_tooltip:
-  default: "basic"
+font_awsome_background_color:
+  default: "#000000"
   type: string
-  description: "Alternative text to be displayed when hovering over trust-level flair"
-tl-member_tooltip:
-  default: "member"
+new_user_flair_image:
+  default: ""
   type: string
-  description: "Alternative text to be displayed when hovering over trust-level flair"
-tl-regular_tooltip:
-  default: "regular"
+  description: "The image URL for the new user trust level (TL0).
+    TIP: Use the inlcuded template image to create your own image. Upload your image to this theme,
+    then right-click on the link to your upload, copy the image address, and then paste the link
+    into this textbox."
+basic_user_flair_image:
+  default: ""
   type: string
-  description: "Alternative text to be displayed when hovering over trust-level flair"
-tl-leader_tooltip:
-  default: "leader"
+  description: "The image URL for the basic user trust level (TL1).
+    TIP: Use the inlcuded template image to create your own image. Upload your image to this theme,
+    then right-click on the link to your upload, copy the image address, and then paste the link
+    into this textbox."
+member_flair_image:
+  default: ""
   type: string
-  description: "Alternative text to be displayed when hovering over trust-level flair"
+  description: "The image URL for the member trust level (TL2).
+    TIP: Use the inlcuded template image to create your own image. Upload your image to this theme,
+    then right-click on the link to your upload, copy the image address, and then paste the link
+    into this textbox."
+regular_flair_image:
+  default: ""
+  type: string
+  description: "The image URL for the regular trust level (TL3).
+    TIP: Use the inlcuded template image to create your own image. Upload your image to this theme,
+    then right-click on the link to your upload, copy the image address, and then paste the link
+    into this textbox."
+leader_flair_image:
+  default: ""
+  type: string
+  description: "The image URL for the leader trust level (TL4).
+    TIP: Use the inlcuded template image to create your own image. Upload your image to this theme,
+    then right-click on the link to your upload, copy the image address, and then paste the link
+    into this textbox."
