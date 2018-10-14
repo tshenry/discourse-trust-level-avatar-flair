@@ -1,6 +1,9 @@
 {
-  "name": "Trust-Level Avatar Flair Theme Component",
+  "name": "New Trust Level Avatar",
   "about_url": "https://meta.discourse.org/t/82656",
+  "license_url": "https://github.com/tshenry/discourse-trust-level-avatar-flair/blob/master/LICENSE",
   "component": true,
-  "license_url": "https://github.com/tshenry/discourse-trust-level-avatar-flair/blob/master/LICENSE"
+  "assets": {
+  	"template": "assets/template.png"
+  }
 }
