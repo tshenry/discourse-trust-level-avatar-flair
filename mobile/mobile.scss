@@ -1,43 +1,48 @@
-@if $trust_level_flair_position == 'overlap' {
-    .tl-flair.user-profile-avt {
+@if $trust_level_flair_position == "overlap" {
+    .user-profile-avt .tl-flair {
         right: 25px;
     }
-    .collapsed-info .tl-flair.user-profile-avt {
+    .collapsed-info .user-profile-avt .tl-flair {
         bottom: 12px;
         right: 13px;
     }
-} @else if $trust_level_flair_position == 'top-right' {
-    .tl-flair.user-profile-avt {
+} @else if $trust_level_flair_position == "top-right" {
+    .topic-avatar .tl-flair {
+        top: -5px;
+        right: -5px;
+    }
+    .user-profile-avt .tl-flair {
         right: 2px;
     }
-    .collapsed-info .tl-flair.user-profile-avt {
+    .collapsed-info .user-profile-avt .tl-flair {
         top: 2px;
         right: 2px;
     }
-}
-@else if $trust_level_flair_position == 'top-left' {
-    .tl-flair.user-profile-avt {
+} @else if $trust_level_flair_position == "top-left" {
+    .topic-avatar .tl-flair {
+        top: -5px;
+        left: -5px;
+    }
+    .user-profile-avt .tl-flair {
         left: 2px;
     }
-    .collapsed-info .tl-flair.user-profile-avt {
+    .collapsed-info .user-profile-avt .tl-flair {
         top: 2px;
         left: 2px;
     }
-}
-@else if $trust_level_flair_position == 'bottom-right' {
-    .tl-flair.user-profile-avt {
+} @else if $trust_level_flair_position == "bottom-right" {
+    .user-profile-avt .tl-flair {
         right: 2px;
     }
-    .collapsed-info .tl-flair.user-profile-avt {
+    .collapsed-info .user-profile-avt .tl-flair {
         bottom: 12px;
         right: 2px;
     }
-}
-@else {
-    .tl-flair.user-profile-avt {
+} @else {
+    .user-profile-avt .tl-flair {
         left: 2px;
     }
-    .collapsed-info .tl-flair.user-profile-avt {
+    .collapsed-info .user-profile-avt .tl-flair {
         bottom: 12px;
         left: 2px;
     }
