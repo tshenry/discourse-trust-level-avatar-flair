@@ -1,209 +1,218 @@
-@if ($use_font_awesome == 'false') {
-    .tl-flair i {
-        display: none;
-    }
+@if ($use_font_awesome == "false") {
+  .tl-flair svg {
+    display: none;
+  }
 
-    @if (str-index($new_user_flair_image, 'http')) {
-        .tl-0 {
-            background-image: url($new_user_flair_image);
-        }
+  @if (str-index($new_user_flair_icon, "http")) {
+    .tl-0 {
+      background-image: url($new_user_flair_icon);
     }
-    @if (str-index($basic_user_flair_image, 'http')) {
-        .tl-1 {
-            background-image: url($basic_user_flair_image);
-        }
+  }
+  @if (str-index($basic_user_flair_icon, "http")) {
+    .tl-1 {
+      background-image: url($basic_user_flair_icon);
     }
-    @if (str-index($member_flair_image, 'http')) {
-        .tl-2 {
-            background-image: url($member_flair_image);
-        }
+  }
+  @if (str-index($member_flair_icon, "http")) {
+    .tl-2 {
+      background-image: url($member_flair_icon);
     }
-    @if (str-index($regular_flair_image, 'http')) {
-        .tl-3 {
-            background-image: url($regular_flair_image);
-        }
+  }
+  @if (str-index($regular_flair_icon, "http")) {
+    .tl-3 {
+      background-image: url($regular_flair_icon);
     }
-    @if (str-index($leader_flair_image, 'http')) {
-        .tl-4 {
-            background-image: url($leader_flair_image);
-        }
+  }
+  @if (str-index($leader_flair_icon, "http")) {
+    .tl-4 {
+      background-image: url($leader_flair_icon);
     }
-}
-@else {
-	@if (str-length($new_user_flair_image) > 0) {
-        .tl-0, .tl-0 .d-icon-heart {
-            background: $font_awsome_background_color;
-        	color: $font_awsome_color !important; // important needed for heart icon
-        }
+  }
+} @else {
+  @if (str-length($new_user_flair_icon) > 0) {
+    .tl-0,
+    .tl-0 .d-icon-heart {
+      background: $font_awsome_background_color;
+      color: $font_awsome_color !important; // important needed for heart icon
     }
-    @if (str-length($basic_user_flair_image) > 0) {
-        .tl-1, .tl-1 .d-icon-heart {
-            background: $font_awsome_background_color;
-        	color: $font_awsome_color !important; // important needed for heart icon
-        }
+  }
+  @if (str-length($basic_user_flair_icon) > 0) {
+    .tl-1,
+    .tl-1 .d-icon-heart {
+      background: $font_awsome_background_color;
+      color: $font_awsome_color !important; // important needed for heart icon
     }
-    @if (str-length($member_flair_image) > 0) {
-        .tl-2, .tl-2 .d-icon-heart {
-            background: $font_awsome_background_color;
-        	color: $font_awsome_color !important; // important needed for heart icon
-        }
+  }
+  @if (str-length($member_flair_icon) > 0) {
+    .tl-2,
+    .tl-2 .d-icon-heart {
+      background: $font_awsome_background_color;
+      color: $font_awsome_color !important; // important needed for heart icon
     }
-    @if (str-length($regular_flair_image) > 0) {
-        .tl-3, .tl-3 .d-icon-heart {
-            background: $font_awsome_background_color;
-        	color: $font_awsome_color !important; // important needed for heart icon
-        }
+  }
+  @if (str-length($regular_flair_icon) > 0) {
+    .tl-3,
+    .tl-3 .d-icon-heart {
+      background: $font_awsome_background_color;
+      color: $font_awsome_color !important; // important needed for heart icon
     }
-    @if (str-length($leader_flair_image) > 0) {
-        .tl-4, .tl-4 .d-icon-heart {
-            background: $font_awsome_background_color;
-        	color: $font_awsome_color !important; // important needed for heart icon
-        }
+  }
+  @if (str-length($leader_flair_icon) > 0) {
+    .tl-4,
+    .tl-4 .d-icon-heart {
+      background: $font_awsome_background_color;
+      color: $font_awsome_color !important; // important needed for heart icon
     }
+  }
 }
 .tl-flair {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: absolute;
-    border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  border-radius: 50%;
 }
-.user-card-avt .tl-flair, .user-profile-avt .tl-flair {
-    background-size: 40px 40px;
-    width: 40px;
-    height: 40px;
-    font-size: 1.75em;
-    i {
-        height: .95em;
-    }
+.user-card-avt .tl-flair,
+.user-profile-avt .tl-flair {
+  background-size: 40px 40px;
+  width: 40px;
+  height: 40px;
+  font-size: 1.75em;
+  i {
+    height: 0.95em;
+  }
 }
-.topic-avatar .tl-flair, .collapsed-info .user-profile-avt .tl-flair {
-    background-size: 20px 20px;
-    width: 20px;
-    height: 20px;
-    font-size: .75em;
-    i {
-        height: .95em;
-    }
+.topic-avatar .tl-flair,
+.collapsed-info .user-profile-avt .tl-flair {
+  background-size: 20px 20px;
+  width: 20px;
+  height: 20px;
+  font-size: 0.75em;
+  i {
+    height: 0.95em;
+  }
 }
-@if $trust_level_flair_position == 'overlap' {
-    .user-card-avt .tl-flair {
-        bottom: 0;
-        right: 18px;
+@if $trust_level_flair_position == "overlap" {
+  .user-card-avt .tl-flair {
+    bottom: 0;
+    right: 18px;
+  }
+  .topic-avatar .tl-flair {
+    bottom: 0;
+    right: 6px;
+  }
+  .user-profile-avt .tl-flair {
+    bottom: 8px;
+    right: 40px;
+  }
+  .collapsed-info .user-profile-avt .tl-flair {
+    bottom: 8px;
+    right: 14px;
+  }
+  @if $group_flair_always_on_top == "true" {
+    .avatar-flair-image {
+      z-index: 1;
     }
-    .topic-avatar .tl-flair {
-        bottom: 0;
-        right: 6px;
+  } @else {
+    .avatar-flair-image {
+      z-index: initial;
     }
-    .user-profile-avt .tl-flair {
-        bottom: 8px;
-        right: 40px;
+  }
+} @else if $trust_level_flair_position == "top-right" {
+  .user-card-avt .tl-flair {
+    top: 0;
+    right: -6px;
+  }
+  .topic-avatar .tl-flair {
+    top: 15px;
+    right: -6px;
+  }
+  .user-profile-avt .tl-flair {
+    top: 0;
+    right: 16px;
+  }
+  .collapsed-info .user-profile-avt .tl-flair {
+    top: -2px;
+    right: 2px;
+  }
+} @else if $trust_level_flair_position == "top-left" {
+  .user-card-avt .tl-flair {
+    top: 0;
+    left: -6px;
+  }
+  .topic-avatar .tl-flair {
+    top: 15px;
+    left: -6px;
+  }
+  .user-profile-avt .tl-flair {
+    top: 0;
+    left: -6px;
+  }
+  .collapsed-info .user-profile-avt .tl-flair {
+    top: -2px;
+    left: -8px;
+  }
+} @else if $trust_level_flair_position == "bottom-right" {
+  .user-card-avt .tl-flair,
+  .topic-avatar .tl-flair {
+    bottom: 0;
+    right: -6px;
+  }
+  .user-profile-avt .tl-flair {
+    bottom: 8px;
+    right: 16px;
+  }
+  .collapsed-info .user-profile-avt .tl-flair {
+    bottom: 8px;
+    right: 2px;
+  }
+  @if $group_flair_always_on_top == "true" {
+    .topic-avatar {
+      .avatar-flair ~ .tl-avatar-flair {
+        display: none;
+      }
     }
-    .collapsed-info .user-profile-avt .tl-flair {
-        bottom: 8px;
-        right: 14px;
+    .user-card-avt,
+    .user-profile-avt {
+      display: none;
     }
-    @if $group_flair_always_on_top == 'true' {
-        .avatar-flair-image {
-            z-index: 1;
-        }
-    } @else {
-        .avatar-flair-image {
-            z-index: initial;
-        }
+    a + .ember-view .user-card-avt {
+      display: block;
     }
-} @else if $trust_level_flair_position == 'top-right' {
-    .user-card-avt .tl-flair {
-        top: 0;
-        right: -6px;
+    img + .ember-view .user-profile-avt {
+      display: block;
     }
-    .topic-avatar .tl-flair {
-        top: 15px;
-        right: -6px;
+    .avatar-flair-image {
+      display: initial !important;
     }
-    .user-profile-avt .tl-flair {
-        top: 0;
-        right: 16px;
+  } @else {
+    .avatar-flair-image {
+      display: none !important;
     }
-    .collapsed-info .user-profile-avt .tl-flair {
-        top: -2px;
-        right: 2px;
-    }
-} @else if $trust_level_flair_position == 'top-left' {
-    .user-card-avt .tl-flair {
-        top: 0;
-        left: -6px;
-    }
-    .topic-avatar .tl-flair {
-        top: 15px;
-        left: -6px;
-    }
-    .user-profile-avt .tl-flair {
-        top: 0;
-        left: -6px;
-    }
-    .collapsed-info .user-profile-avt .tl-flair {
-        top: -2px;
-        left: -8px;
-    }
-} @else if $trust_level_flair_position == 'bottom-right' {
-    .user-card-avt .tl-flair, .topic-avatar .tl-flair {
-        bottom: 0;
-        right: -6px;
-    }
-    .user-profile-avt .tl-flair {
-        bottom: 8px;
-        right: 16px;
-    }
-    .collapsed-info .user-profile-avt .tl-flair {
-        bottom: 8px;
-        right: 2px;
-    }
-    @if $group_flair_always_on_top == 'true' {
-        .topic-avatar {
-            .avatar-flair ~ .tl-avatar-flair {
-                display: none;
-            }
-        }
-        .user-card-avt, .user-profile-avt {
-            display: none;
-        }
-        a + .ember-view .user-card-avt {
-            display: block;
-        }
-        img + .ember-view .user-profile-avt {
-            display: block;
-        }
-        .avatar-flair-image {
-            display: initial !important;
-        }
-    } @else {
-        .avatar-flair-image {
-            display: none !important;
-        }
-    }
-} @else if $trust_level_flair_position == 'bottom-left' {
-    .user-card-avt .tl-flair, .topic-avatar .tl-flair {
-        bottom: 0;
-        left: -6px;
-    }
-    .user-profile-avt .tl-flair {
-        bottom: 8px;
-        left: -6px;
-    }
-    .collapsed-info .user-profile-avt .tl-flair {
-        bottom: 8px;
-        left: -8px;
-    }
+  }
+} @else if $trust_level_flair_position == "bottom-left" {
+  .user-card-avt .tl-flair,
+  .topic-avatar .tl-flair {
+    bottom: 0;
+    left: -6px;
+  }
+  .user-profile-avt .tl-flair {
+    bottom: 8px;
+    left: -6px;
+  }
+  .collapsed-info .user-profile-avt .tl-flair {
+    bottom: 8px;
+    left: -8px;
+  }
 }
 .user-main .collapsed-info.about {
-   overflow: initial;
+  overflow: initial;
 }
 .user-main .about .details {
-    padding: 15px 15px 4px 15px;
+  padding: 15px 15px 4px 15px;
 }
 .user-main .about.collapsed-info .details {
-    padding: 12px 15px 2px 15px;
+  padding: 12px 15px 2px 15px;
 }
