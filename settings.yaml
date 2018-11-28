@@ -13,8 +13,9 @@ group_flair_always_on_top:
 use_font_awesome:
   default: false
   type: bool
-  description: "<span>This will enable font awesome to be used in the flair image fields below. Use the name of the icon 
-    like <b>heart</b> or <b>plane</b>. <a href='https://fontawesome.com/v4.7.0/icons/' target='_blank'>Click Here</a> 
+  description: "<span>Use font awesome in the flair icon fields below. Accepted 
+    formats: \"fa-icon\", \"far fa-icon\" or \"fab fa-icon\". 
+    <a href='https://fontawesome.com/icons?d=gallery&m=free' target='_blank'>Click Here</a> 
     to view the list of availible icons."
 font_awsome_color:
   default: "#ffffff"
@@ -22,38 +23,26 @@ font_awsome_color:
 font_awsome_background_color:
   default: "#000000"
   type: string
-new_user_flair_image:
+new_user_flair_icon:
   default: ""
   type: string
   description: "The image URL for the new user trust level (TL0).
-    TIP: Use the inlcuded template image to create your own image. Upload your image to this theme,
+    TIP: Use the inlcuded template image to create your own flair images. Upload your images to this theme,
     then right-click on the link to your upload, copy the image address, and then paste the link
     into this textbox."
-basic_user_flair_image:
+basic_user_flair_icon:
   default: ""
   type: string
-  description: "The image URL for the basic user trust level (TL1).
-    TIP: Use the inlcuded template image to create your own image. Upload your image to this theme,
-    then right-click on the link to your upload, copy the image address, and then paste the link
-    into this textbox."
-member_flair_image:
+  description: "The image URL for the basic user trust level (TL1)."
+member_flair_icon:
   default: ""
   type: string
-  description: "The image URL for the member trust level (TL2).
-    TIP: Use the inlcuded template image to create your own image. Upload your image to this theme,
-    then right-click on the link to your upload, copy the image address, and then paste the link
-    into this textbox."
-regular_flair_image:
+  description: "The image URL for the member trust level (TL2)."
+regular_flair_icon:
   default: ""
   type: string
-  description: "The image URL for the regular trust level (TL3).
-    TIP: Use the inlcuded template image to create your own image. Upload your image to this theme,
-    then right-click on the link to your upload, copy the image address, and then paste the link
-    into this textbox."
-leader_flair_image:
+  description: "The image URL for the regular trust level (TL3)."
+leader_flair_icon:
   default: ""
   type: string
-  description: "The image URL for the leader trust level (TL4).
-    TIP: Use the inlcuded template image to create your own image. Upload your image to this theme,
-    then right-click on the link to your upload, copy the image address, and then paste the link
-    into this textbox."
+  description: "The image URL for the leader trust level (TL4)."
