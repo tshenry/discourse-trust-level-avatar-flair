@@ -1,45 +1,43 @@
 <script type="text/discourse-plugin"version="0.8.18">
-	const h = require("virtual-dom").h;
-	let trustIcons = [
-		settings.new_user_flair_image,
-		settings.basic_user_flair_image,
-		settings.member_flair_image,
-		settings.regular_flair_image,
-		settings.leader_flair_image
-	];
+  const { iconNode, convertIconClass } = require("discourse-common/lib/icon-library");
+  const h = require("virtual-dom").h;
+  let trustIcons = [
+    settings.new_user_flair_icon,
+    settings.basic_user_flair_icon,
+    settings.member_flair_icon,
+    settings.regular_flair_icon,
+    settings.leader_flair_icon
+  ];
 
-	api.createWidget("trust-level-avatar-flair", {
-		tagName: "div.tl-avatar-flair",
+  api.createWidget("trust-level-avatar-flair", {
+    tagName: "div.tl-avatar-flair",
 
-		html(attrs) {
-			let user = attrs.model;
-			let trustLevel = user.trust_level;
-			let trustName = Discourse.Site.currentProp("trustLevels").findBy(
-				"id",
-				trustLevel
-			).name;
+    html(attrs) {
+      let user = attrs.model;
+      let trustLevel = user.trust_level;
+      let trustLevelIcon = trustIcons[trustLevel];
+      let trustName = Discourse.Site.currentProp("trustLevels").findBy(
+          "id",
+          trustLevel
+        ).name;
 
-			if(trustIcons[trustLevel].indexOf("http") >= 0) {
-				trustIcons[trustLevel] = "";
-			}
+      if(trustLevelIcon.includes("fa-")) {
+        const covertedIcon = convertIconClass(trustLevelIcon);
+        return h("div.tl-" + trustLevel + ".tl-flair", { title: trustName }, [
+          iconNode(covertedIcon)
+        ]);
+      } else {
+        return h("div.tl-" + trustLevel + ".tl-flair", { title: trustName });
+      }
+    }
+  });
 
-			return h("div.tl-" + trustLevel + ".tl-flair", { title: trustName }, [
-				h(
-					"i.fa.fa-" +
-						trustIcons[trustLevel] +
-						".d-icon.d-icon-" +
-						trustIcons[trustLevel]
-				)
-			]);
-		}
-	});
-
-	api.decorateWidget("post-avatar:after", helper => {
-		let trustLevel = helper.getModel().get("trust_level");
-		let attrs = { model: { trust_level: trustLevel } };
-
-		return helper.widget.attach("trust-level-avatar-flair", attrs);
-	});
+  api.decorateWidget("post-avatar:after", helper => {
+    let trustLevel = helper.getModel().get("trust_level");
+    let attrs = { model: { trust_level: trustLevel } };
+    
+    return helper.widget.attach("trust-level-avatar-flair", attrs);
+  });
 </script>
 
 <script type="text/x-handlebars" data-template-name="/connectors/user-card-avatar-flair/user-card-avt">
