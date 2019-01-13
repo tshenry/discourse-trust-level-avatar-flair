@@ -154,6 +154,9 @@
     top: -2px;
     left: -8px;
   }
+  .embedded-posts .tl-flair {
+    left: 19px;
+  }
 } @else if $trust_level_flair_position == "bottom-right" {
   .user-card-avt .tl-flair,
   .topic-avatar .tl-flair {
@@ -205,6 +208,9 @@
   .collapsed-info .user-profile-avt .tl-flair {
     bottom: 8px;
     left: -8px;
+  }
+  .embedded-posts .tl-flair {
+    left: 19px;
   }
 }
 .user-main .collapsed-info.about {
