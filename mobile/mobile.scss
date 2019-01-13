@@ -1,49 +1,51 @@
-@if $trust_level_flair_position == "overlap" {
+.mobile-view {
+  @if $trust_level_flair_position == "overlap" {
     .user-profile-avt .tl-flair {
-        right: 25px;
+      right: 25px;
     }
     .collapsed-info .user-profile-avt .tl-flair {
-        bottom: 12px;
-        right: 13px;
+      bottom: 12px;
+      right: 13px;
     }
-} @else if $trust_level_flair_position == "top-right" {
+  } @else if $trust_level_flair_position == "top-right" {
     .topic-avatar .tl-flair {
-        top: -5px;
-        right: -5px;
+      top: -5px;
+      right: -5px;
     }
     .user-profile-avt .tl-flair {
-        right: 2px;
+      right: 2px;
     }
     .collapsed-info .user-profile-avt .tl-flair {
-        top: 2px;
-        right: 2px;
+      top: 2px;
+      right: 2px;
     }
-} @else if $trust_level_flair_position == "top-left" {
+  } @else if $trust_level_flair_position == "top-left" {
     .topic-avatar .tl-flair {
-        top: -5px;
-        left: -5px;
+      top: -5px;
+      left: -5px;
     }
     .user-profile-avt .tl-flair {
-        left: 2px;
+      left: 2px;
     }
     .collapsed-info .user-profile-avt .tl-flair {
-        top: 2px;
-        left: 2px;
+      top: 2px;
+      left: 2px;
     }
-} @else if $trust_level_flair_position == "bottom-right" {
+  } @else if $trust_level_flair_position == "bottom-right" {
     .user-profile-avt .tl-flair {
-        right: 2px;
+      right: 2px;
     }
     .collapsed-info .user-profile-avt .tl-flair {
-        bottom: 12px;
-        right: 2px;
+      bottom: 12px;
+      right: 2px;
     }
-} @else {
+  } @else {
     .user-profile-avt .tl-flair {
-        left: 2px;
+      left: 2px;
     }
     .collapsed-info .user-profile-avt .tl-flair {
-        bottom: 12px;
-        left: 2px;
+      bottom: 12px;
+      left: 2px;
     }
+  }
 }
