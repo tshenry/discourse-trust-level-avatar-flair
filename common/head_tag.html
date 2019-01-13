@@ -8,6 +8,9 @@
     settings.regular_flair_icon,
     settings.leader_flair_icon
   ];
+  
+  // Needed for embedded posts when they aren't already loaded into the post stream
+  api.includePostAttributes('trust_level');
 
   api.createWidget("trust-level-avatar-flair", {
     tagName: "div.tl-avatar-flair",
@@ -36,7 +39,9 @@
     let trustLevel = helper.getModel().get("trust_level");
     let attrs = { model: { trust_level: trustLevel } };
     
-    return helper.widget.attach("trust-level-avatar-flair", attrs);
+    if(trustLevel) {
+      return helper.widget.attach("trust-level-avatar-flair", attrs);
+    }
   });
 </script>
 
