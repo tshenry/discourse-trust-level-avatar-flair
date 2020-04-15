@@ -46,3 +46,7 @@ leader_flair_icon:
   default: ""
   type: string
   description: "The image URL for the leader trust level (TL4)."
+exclude_nonhuman_users:
+  default: true
+  type: bool
+  description: "Flair will not be displayed on the system and discobot users"

@@ -17,6 +17,11 @@
 
     html(attrs) {
       let user = attrs.model;
+
+      if(settings.exclude_nonhuman_users && attrs.model.id < 0) {
+        return
+      }
+
       let trustLevel = user.trust_level;
       let trustLevelIcon = trustIcons[trustLevel];
       let trustName = Discourse.Site.currentProp("trustLevels").findBy(
@@ -36,6 +41,10 @@
   });
 
   api.decorateWidget("post-avatar:after", helper => {
+    if(settings.exclude_nonhuman_users && helper.attrs.user_id < 0) {
+      return
+    }
+
     let trustLevel = helper.getModel().get("trust_level");
     let attrs = { model: { trust_level: trustLevel } };
     
