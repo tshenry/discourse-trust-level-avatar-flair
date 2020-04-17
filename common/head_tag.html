@@ -18,7 +18,7 @@
     html(attrs) {
       let user = attrs.model;
 
-      if(settings.exclude_nonhuman_users && attrs.model.id < 0) {
+      if(settings.exclude_nonhuman_users && user.id < 0) {
         return
       }
 
@@ -28,14 +28,16 @@
           "id",
           trustLevel
         ).name;
+      let classList = "div.tl-" + trustLevel + ".tl-flair" + ".tl-flair-" + user.username;
 
       if(trustLevelIcon.includes("fa-")) {
-        const covertedIcon = convertIconClass(trustLevelIcon);
-        return h("div.tl-" + trustLevel + ".tl-flair", { title: trustName }, [
+        let covertedIcon = convertIconClass(trustLevelIcon);
+
+        return h(classList, { title: trustName }, [
           iconNode(covertedIcon)
         ]);
       } else {
-        return h("div.tl-" + trustLevel + ".tl-flair", { title: trustName });
+        return h(classList, { title: trustName });
       }
     }
   });
@@ -46,7 +48,8 @@
     }
 
     let trustLevel = helper.getModel().get("trust_level");
-    let attrs = { model: { trust_level: trustLevel } };
+    let username = helper.attrs.username
+    let attrs = { model: { trust_level: trustLevel, username: username } };
     
     if(trustLevel) {
       return helper.widget.attach("trust-level-avatar-flair", attrs);
