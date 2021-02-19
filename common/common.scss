@@ -1,8 +1,4 @@
 @if ($use_font_awesome == "false") {
-  .tl-flair svg {
-    display: none;
-  }
-
   @if (str-index($new_user_flair_icon, "http")) {
     .tl-0 {
       background-image: url($new_user_flair_icon);
@@ -80,7 +76,7 @@
   width: 40px;
   height: 40px;
   font-size: 1.75em;
-  i {
+  .d-icon {
     height: 0.95em;
   }
 }
@@ -90,7 +86,7 @@
   width: 20px;
   height: 20px;
   font-size: 0.75em;
-  i {
+  .d-icon {
     height: 0.95em;
   }
 }
@@ -112,11 +108,11 @@
     right: 14px;
   }
   @if $group_flair_always_on_top == "true" {
-    .avatar-flair-image {
+    .avatar-flair {
       z-index: 1;
     }
   } @else {
-    .avatar-flair-image {
+    .avatar-flair {
       z-index: initial;
     }
   }
@@ -172,26 +168,19 @@
     right: 2px;
   }
   @if $group_flair_always_on_top == "true" {
-    .topic-avatar {
-      .avatar-flair ~ .tl-avatar-flair {
+    .topic-avatar,
+    .user-card-avatar,
+    .user-profile-avatar {
+      .avatar-flair ~ .tl-avatar-flair,
+      div + div .tl-avatar-flair {
         display: none;
       }
     }
-    .user-card-avt,
-    .user-profile-avt {
-      display: none;
-    }
-    a + .ember-view .user-card-avt {
-      display: block;
-    }
-    img + .ember-view .user-profile-avt {
-      display: block;
-    }
-    .avatar-flair-image {
-      display: initial !important;
+    .avatar-flair {
+      display: flex;
     }
   } @else {
-    .avatar-flair-image {
+    .avatar-flair {
       display: none !important;
     }
   }

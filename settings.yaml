@@ -27,9 +27,8 @@ new_user_flair_icon:
   default: ""
   type: string
   description: "The image URL for the new user trust level (TL0).
-    TIP: Use the inlcuded template image to create your own flair images. Upload your images to this theme,
-    then right-click on the link to your upload, copy the image address, and then paste the link
-    into this textbox."
+    TIP: Upload your images to a local theme component. Once uploaded, right-click on the upload link,
+    copy the image address, then paste the link into this textbox."
 basic_user_flair_icon:
   default: ""
   type: string
