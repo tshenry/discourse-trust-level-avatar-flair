@@ -1,5 +1,6 @@
 <script type="text/discourse-plugin"version="0.8.18">
   const { iconNode, convertIconClass } = require("discourse-common/lib/icon-library");
+  const Site = require("discourse/models/site").default;
   const h = require("virtual-dom").h;
   let trustIcons = [
     settings.new_user_flair_icon,
@@ -24,7 +25,7 @@
 
       let trustLevel = user.trust_level;
       let trustLevelIcon = trustIcons[trustLevel];
-      let trustName = Discourse.Site.currentProp("trustLevels").findBy(
+      let trustName = Site.currentProp("trustLevels").findBy(
           "id",
           trustLevel
         ).name;
