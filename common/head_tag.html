@@ -52,7 +52,7 @@
     let username = helper.attrs.username
     let attrs = { model: { trust_level: trustLevel, username: username } };
     
-    if(trustLevel) {
+    if(trustLevel >= 0) {
       return helper.widget.attach("trust-level-avatar-flair", attrs);
     }
   });
