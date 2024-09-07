@@ -93,7 +93,7 @@
 @if $trust_level_flair_position == "overlap" {
   .user-card-avt .tl-flair {
     bottom: 0;
-    right: 18px;
+    right: 12px;
   }
   .topic-avatar .tl-flair {
     bottom: 0;
@@ -119,7 +119,7 @@
 } @else if $trust_level_flair_position == "top-right" {
   .user-card-avt .tl-flair {
     top: 0;
-    right: -6px;
+    right: -10px;
   }
   .topic-avatar .tl-flair {
     top: 15px;
@@ -136,7 +136,7 @@
 } @else if $trust_level_flair_position == "top-left" {
   .user-card-avt .tl-flair {
     top: 0;
-    left: -6px;
+    left: -8px;
   }
   .topic-avatar .tl-flair {
     top: 15px;
@@ -157,7 +157,7 @@
   .user-card-avt .tl-flair,
   .topic-avatar .tl-flair {
     bottom: 0;
-    right: -6px;
+    right: -10px;
   }
   .user-profile-avt .tl-flair {
     bottom: 8px;
@@ -169,7 +169,7 @@
   }
   @if $group_flair_always_on_top == "true" {
     .topic-avatar,
-    .user-card-avatar,
+    .d-user-card__avatar-container,
     .user-profile-avatar {
       .avatar-flair ~ .tl-avatar-flair,
       div + div .tl-avatar-flair {
@@ -188,7 +188,7 @@
   .user-card-avt .tl-flair,
   .topic-avatar .tl-flair {
     bottom: 0;
-    left: -6px;
+    left: -8px;
   }
   .user-profile-avt .tl-flair {
     bottom: 8px;
