@@ -6,8 +6,6 @@ import { convertIconClass } from "discourse/lib/icon-library";
 export default class TrustLevelAvatarFlair extends Component {
   @service site;
 
-  // STILL NEED CUSTOM IMAGE!!!!
-
   get user() {
     return this.args.model;
   }
