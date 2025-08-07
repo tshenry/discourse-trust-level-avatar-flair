@@ -4,6 +4,6 @@
   "license_url": "https://github.com/tshenry/discourse-trust-level-avatar-flair/blob/master/LICENSE",
   "component": true,
   "assets": {
-  	"template": "assets/template.png"
+    "template": "assets/template.png"
   }
 }

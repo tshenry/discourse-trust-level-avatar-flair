@@ -72,7 +72,7 @@
 }
 .user-card-avt .tl-flair,
 .user-profile-avt .tl-flair {
-  background-size: 40px 40px;
+  background-size: contain;
   width: 40px;
   height: 40px;
   font-size: 1.75em;
@@ -82,9 +82,9 @@
 }
 .topic-avatar .tl-flair,
 .collapsed-info .user-profile-avt .tl-flair {
-  background-size: 20px 20px;
-  width: 20px;
-  height: 20px;
+  background-size: contain;
+  width: 24px;
+  height: 24px;
   font-size: 0.75em;
   .d-icon {
     height: 0.95em;
@@ -92,20 +92,20 @@
 }
 @if $trust_level_flair_position == "overlap" {
   .user-card-avt .tl-flair {
-    bottom: 0;
-    right: 18px;
+    bottom: -2px;
+    right: 12px;
   }
   .topic-avatar .tl-flair {
-    bottom: 0;
-    right: 6px;
+    bottom: -2px;
+    right: 2px;
   }
   .user-profile-avt .tl-flair {
     bottom: 8px;
-    right: 40px;
+    right: 32px;
   }
   .collapsed-info .user-profile-avt .tl-flair {
     bottom: 8px;
-    right: 14px;
+    right: 12px;
   }
   @if $group_flair_always_on_top == "true" {
     .avatar-flair {
@@ -118,15 +118,15 @@
   }
 } @else if $trust_level_flair_position == "top-right" {
   .user-card-avt .tl-flair {
-    top: 0;
-    right: -6px;
+    top: -2px;
+    right: -4px;
   }
   .topic-avatar .tl-flair {
-    top: 15px;
-    right: -6px;
+    top: -2px;
+    right: -8px;
   }
   .user-profile-avt .tl-flair {
-    top: 0;
+    top: -2px;
     right: 16px;
   }
   .collapsed-info .user-profile-avt .tl-flair {
@@ -135,29 +135,32 @@
   }
 } @else if $trust_level_flair_position == "top-left" {
   .user-card-avt .tl-flair {
-    top: 0;
-    left: -6px;
+    top: -2px;
+    left: -4px;
   }
   .topic-avatar .tl-flair {
-    top: 15px;
-    left: -6px;
+    top: -2px;
+    left: -5px;
   }
   .user-profile-avt .tl-flair {
-    top: 0;
-    left: -6px;
+    top: -2px;
+    left: -4px;
   }
   .collapsed-info .user-profile-avt .tl-flair {
-    top: -2px;
-    left: -8px;
+    top: -6px;
+    left: -7px;
   }
   .embedded-posts .tl-flair {
     left: 19px;
   }
 } @else if $trust_level_flair_position == "bottom-right" {
-  .user-card-avt .tl-flair,
+  .user-card-avt .tl-flair {
+    bottom: -2px;
+    right: -4px;
+  }
   .topic-avatar .tl-flair {
-    bottom: 0;
-    right: -6px;
+    bottom: -2px;
+    right: -8px;
   }
   .user-profile-avt .tl-flair {
     bottom: 8px;
@@ -187,12 +190,12 @@
 } @else if $trust_level_flair_position == "bottom-left" {
   .user-card-avt .tl-flair,
   .topic-avatar .tl-flair {
-    bottom: 0;
-    left: -6px;
+    bottom: -2px;
+    left: -5px;
   }
   .user-profile-avt .tl-flair {
     bottom: 8px;
-    left: -6px;
+    left: -4px;
   }
   .collapsed-info .user-profile-avt .tl-flair {
     bottom: 8px;
@@ -210,4 +213,47 @@
 }
 .user-main .about.collapsed-info .details {
   padding: 12px 15px 2px 15px;
+}
+
+.mobile-view {
+  @if $trust_level_flair_position == "overlap" {
+    .user-profile-avt .tl-flair {
+      right: 25px;
+    }
+    .collapsed-info .user-profile-avt .tl-flair {
+      right: 12px;
+    }
+  } @else if $trust_level_flair_position == "top-right" {
+    .user-profile-avt .tl-flair {
+      right: 2px;
+    }
+    .collapsed-info .user-profile-avt .tl-flair {
+      top: -4px;
+    }
+  } @else if $trust_level_flair_position == "top-left" {
+    .topic-avatar .tl-flair {
+      left: -8px;
+    }
+    .user-profile-avt .tl-flair {
+      left: 2px;
+    }
+    .collapsed-info .user-profile-avt .tl-flair {
+      top: -4px;
+      left: -8px;
+    }
+  } @else if $trust_level_flair_position == "bottom-right" {
+    .user-profile-avt .tl-flair {
+      right: 2px;
+    }
+  } @else {
+    .topic-avatar .tl-flair {
+      left: -8px;
+    }
+    .user-profile-avt .tl-flair {
+      left: 2px;
+    }
+    .collapsed-info .user-profile-avt .tl-flair {
+      left: -8px;
+    }
+  }
 }

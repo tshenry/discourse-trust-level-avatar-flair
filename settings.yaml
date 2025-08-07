@@ -13,10 +13,10 @@ group_flair_always_on_top:
 use_font_awesome:
   default: false
   type: bool
-  description: "<span>Use font awesome in the flair icon fields below. Accepted 
-    formats: \"fa-icon\", \"far fa-icon\" or \"fab fa-icon\". 
-    <a href='https://fontawesome.com/icons?d=gallery&m=free' target='_blank'>Click Here</a> 
-    to view the list of availible icons."
+  description: '<span>Use font awesome in the flair icon fields below. Accepted
+    formats: "fa-icon", "far fa-icon" or "fab fa-icon".
+    <a href=''https://fontawesome.com/v6/search?ic=free'' target=''_blank''>Click Here</a>
+    to view the list of availible icons.'
 font_awsome_color:
   default: "#ffffff"
   type: string
@@ -27,7 +27,7 @@ new_user_flair_icon:
   default: ""
   type: string
   description: "The image URL for the new user trust level (TL0).
-    TIP: Upload your images to a local theme component. Once uploaded, right-click on the upload link,
+    TIP: Upload your images to a separate local theme component. Once uploaded, right-click on the upload link,
     copy the image address, then paste the link into this textbox."
 basic_user_flair_icon:
   default: ""
@@ -48,4 +48,4 @@ leader_flair_icon:
 exclude_nonhuman_users:
   default: true
   type: bool
-  description: "Flair will not be displayed on the system and discobot users"
+  description: "Flair will not be displayed on system, discobot, and other bot users"
