@@ -28,7 +28,7 @@ export default class TrustLevelAvatarFlair extends Component {
 
     const trustIcon = trustIcons[this.user.trust_level];
 
-    if (trustIcon.includes("fa-")) {
+    if (trustIcon?.includes("fa-")) {
       return convertIconClass(trustIcon);
     }
 
