@@ -36,7 +36,7 @@ export default class TrustLevelAvatarFlair extends Component {
   }
 
   get trustLevelName() {
-    return this.site.trustLevels.findBy("id", this.user.trust_level).name;
+    return this.site.trustLevels[this.user.trust_level]?.name;
   }
 
   <template>
